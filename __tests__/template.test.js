@@ -1,4 +1,4 @@
-import { Age, checkInput, calculateMercury, calculateVenus, calculateMars, calculateJupiter } from './../src/solar-age.js';
+import { Age, checkInput, calculateMercury, calculateVenus, calculateMars, calculateJupiter, calculateLifeExpectancy } from './../src/solar-age.js';
 
 describe('Age', () => {
   test('should create a new age object', () => {

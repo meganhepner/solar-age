@@ -39,5 +39,6 @@ export function calculateJupiter(ageObject) {
 }
 
 export function calculateLifeExpectancy(age, life) {
-
+  const returnLifeExpectancy = (life-age);
+  return returnLifeExpectancy;
 }
