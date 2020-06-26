@@ -22,3 +22,7 @@ export function calculateMars(ageObject) {
   const marsAge = Math.floor(ageObject.earthAge * .53);
   return marsAge;
 }
+
+export function calculateJupiter(ageObject) {
+
+}
