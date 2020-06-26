@@ -1,4 +1,4 @@
-import { Age } from './../src/solar-age.js';
+import { Age, calculateMercury } from './../src/solar-age.js';
 
 describe('Age', () => {
   test('should create a new age object', () => {
