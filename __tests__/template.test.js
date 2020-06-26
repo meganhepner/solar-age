@@ -6,3 +6,10 @@ describe('Age', () => {
     expect(age).toMatchObject({earthAge: 39, mercuryAge: 162, venusAge: 62, marsAge: 20, jupiterAge: 3});
   });
 });
+
+describe('mercuryAge', () => {
+  test('should display earth age in mercury age', () => {
+    const earthAge = 39;
+    expect(mercuryAge).toEqual(162);
+  });
+});

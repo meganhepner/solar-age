@@ -7,3 +7,7 @@ export class Age {
     this.jupiterAge = jupiterAge
   }
 }
+
+function mercuryAge(ageObject) {
+  // this.mercuryAge = (this.earthAge * 4.17);
+}
