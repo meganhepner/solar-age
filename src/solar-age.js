@@ -17,7 +17,23 @@ export function checkInput(ageObject) {
 } 
 
 export function calculateEarthAge(ageObject) {
-  
+  let earthAge = 0;
+  if (ageObject.earthAge !== 0){
+    earthAge = ageObject.earthAge;
+    return earthAge;
+  } else if (ageObject.mercuryAge !==0){
+    earthAge = (Math.round(ageObject.mercuryAge * .24));
+    return earthAge;
+  } else if (ageObject.venusAge !== 0){
+    earthAge = (Math.round(ageObject.venusAge * .62));
+    return earthAge;
+  } else if (ageObject.marsAge !== 0){
+    earthAge = (Math.round(ageObject.marsAge * 1.88));
+    return earthAge;
+  } else if (ageObject.jupiterAge !== 0){
+    earthAge = (Math.round(ageObject.jupiterAge * 11.86));
+    return earthAge;
+  }
 }
 
 export function calculateMercury(ageObject) {

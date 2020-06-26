@@ -34,6 +34,7 @@ describe('calculateEarthAge', () => {
     expect(calculateEarthAge(ageEarth)).toEqual(39);
   });
 });
+
 describe('calculateMercury', () => {
   test('should display earth age in mercury age', () => {
     const age = new Age(39, 0, 0, 0, 0);
