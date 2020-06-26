@@ -39,13 +39,13 @@ export function calculateJupiter(ageObject) {
 }
 
 export function calculateLifeExpectancy(age, life) {
-  let LifeExpectancy = 0;
+  let LifeExpectancy = [0, 0];
   if (life -age > 0){
-    LifeExpectancy = (life - age);
+    LifeExpectancy = [1, (life - age)];
   } else if (life - age < 0) {
-    LifeExpectancy = `You've surpassed life expectancy on your planet by ${age-life} years !`;
+    LifeExpectancy = [2, (age-life)];
   } else if (age === life) {
-    LifeExpectancy = "You'll probably die this year!";
+    LifeExpectancy = [3,0];
   }
   return LifeExpectancy;
 }
