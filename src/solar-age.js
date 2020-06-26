@@ -8,7 +8,7 @@ export class Age {
   }
 }
 
-export function calculateMercury(earthAge) {
-  const mercuryAge = Math.floor(earthAge * 4.17);
+export function calculateMercury(ageObject) {
+  const mercuryAge = Math.floor(ageObject.earthAge * 4.17);
   return mercuryAge;
 }
