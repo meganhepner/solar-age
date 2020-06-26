@@ -41,3 +41,11 @@ describe('calculateJupiter', () => {
     expect(calculateJupiter(age)).toEqual(3);
   });
 });
+
+describe('calculateLifeExpectancy', () => {
+  test('should calculate life expectancy in Earth years', () => {
+    const age = 39;
+    const life = 80;
+    expect(calculateLifeExpectancy(age, life)).toEqual(41);
+  });
+});

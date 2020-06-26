@@ -7,10 +7,10 @@ import { Age, checkInput, calculateMercury, calculateVenus, calculateMars, calcu
 $(document).ready(function () {
   $("form#ageLifeExpectancy").submit(function(event) {
     event.preventDefault();
-    let earthAge = $("input#age").val();
     // let earthLife = $("input#life").val();
+    let earthAge = $("input#age").val();
     let age = new Age(earthAge, 0, 0, 0, 0);
-    if (checkInput === false) {
+    if (checkInput(earthAge) === false) {
       $("div#ageAnswer").text("Please enter your age in whole numbers!");
     } else {
       calculateMercury(earthAge);
