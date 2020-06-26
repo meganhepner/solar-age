@@ -16,6 +16,10 @@ export function checkInput(ageObject) {
   }
 } 
 
+export function calculateEarthAge(ageObject) {
+  
+}
+
 export function calculateMercury(ageObject) {
   const mercuryAge = Math.floor(ageObject.earthAge * 4.17);
   return mercuryAge;

@@ -1,4 +1,4 @@
-import { Age, checkInput, calculateMercury, calculateVenus, calculateMars, calculateJupiter, calculateLifeExpectancy } from './../src/solar-age.js';
+import { Age, checkInput, calculateMercury, calculateVenus, calculateMars, calculateJupiter, calculateLifeExpectancy, calculateEarthAge } from './../src/solar-age.js';
 
 describe('Age', () => {
   test('should create a new age object', () => {
@@ -20,6 +20,20 @@ describe('checkInput', () => {
   });
 });
 
+describe('calculateEarthAge', () => {
+  test('should accept input from ETs and calculate their age in Earth years', () => {
+    const ageEarth= new Age(39, 0, 0, 0, 0);
+    const ageMercury= new Age(0, 4.17, 0, 0, 0);
+    const ageVenus= new Age(0, 0, 1.61, 0, 0);
+    const ageMars= new Age(0, 0, 0, .53, 0);
+    const ageJupiter= new Age(0, 0, 0, 0, .08);
+    expect(calculateEarthAge(ageEarth)).toEqual(39);
+    expect(calculateEarthAge(ageEarth)).toEqual(39);
+    expect(calculateEarthAge(ageEarth)).toEqual(39);
+    expect(calculateEarthAge(ageEarth)).toEqual(39);
+    expect(calculateEarthAge(ageEarth)).toEqual(39);
+  });
+});
 describe('calculateMercury', () => {
   test('should display earth age in mercury age', () => {
     const age = new Age(39, 0, 0, 0, 0);
