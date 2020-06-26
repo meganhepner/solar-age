@@ -17,3 +17,7 @@ export function calculateVenus(ageObject) {
   const venusAge = Math.floor(ageObject.earthAge * 1.61);
   return venusAge;
 }
+
+export function calculateMars(ageObject) {
+
+}
