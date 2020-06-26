@@ -9,7 +9,7 @@ describe('Age', () => {
 
 describe('checkInput', () => {
   test('should return false if user input is not a whole number', () => {
-    const age = new Age("megan", 0, 0, 0, 0);
+    const age = new Age(5.25, 0, 0, 0, 0);
     expect(checkInput(age)).toEqual(false);
   });
 });

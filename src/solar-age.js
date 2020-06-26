@@ -9,13 +9,18 @@ export class Age {
 }
 
 export function checkInput(ageObject) {
- 
-}
+ if (ageObject.earthAge > 0 && Number.isInteger(ageObject.earthAge)) {
+    return true;
+  } else {
+    return false;
+  }
+} 
 
 export function calculateMercury(ageObject) {
   const mercuryAge = Math.floor(ageObject.earthAge * 4.17);
   return mercuryAge;
 }
+
 
 export function calculateVenus(ageObject) {
   const venusAge = Math.floor(ageObject.earthAge * 1.61);
