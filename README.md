@@ -1,11 +1,11 @@
-# _XXX_
+# _Solar Age_
 
-#### _Short Description, 6.19.20_
+#### _Work with ES6, Webpack, and Jest, 6.19.20_
 
 #### By _**Megan Hepner**_
 
 ## Description
-  This is a longer description
+  This webpage is an overview of the lessons covered in Week 5 of Epicodus class. It converts the age of a person in Earth to ages on different planets. It uses Webpack to lint, bundle, and process code. It performs tests on each spec using Jest. It explores new ES6 concepts. 
 
 
 ## Setup/Installation Requirements
@@ -19,9 +19,11 @@
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Spec** | input  | output |
-| **Spec** | input  | output |
-| **Spec** | input  | output |
+| **Program will accept user input Age** | 39  | 39 |
+| **Program will convert Earth Age to Mercury age** | 39 | 162 |
+| **Program will convert Earth Age to Venus age** | 39 | 62 |
+| **Program will convert Earth Age to Mars age** | 39 | 20 |
+| **Program will convert Earth Age to Jupiter age** | 39 | 3 |
 
 ## Support and contact details
 
