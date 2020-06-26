@@ -50,10 +50,10 @@ describe('calculateJupiter', () => {
 
 describe('calculateLifeExpectancy', () => {
   test('should calculate how long a user has to live on earth, or by how much they have surpassed life expenctancy', () => {
-    const age = 39;
+    const age = new Age(39, 0, 0, 0, 0);
     const life = 80;
-    const overAge = 87;
-    const equalAge = 80;
+    const overAge = new Age(87, 0, 0, 0, 0);
+    const equalAge = new Age(80, 0, 0, 0, 0);
     // cost equalAge = 80;
     expect(calculateLifeExpectancy(age, life)).toEqual([1, 41]);
     expect(calculateLifeExpectancy(overAge,life)).toEqual([2, 7]);

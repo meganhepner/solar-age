@@ -22,7 +22,6 @@ export function calculateMercury(ageObject) {
   
 }
 
-
 export function calculateVenus(ageObject) {
   const venusAge = Math.floor(ageObject.earthAge * 1.61);
   return venusAge;
@@ -38,13 +37,13 @@ export function calculateJupiter(ageObject) {
   return jupiterAge;
 }
 
-export function calculateLifeExpectancy(age, life) {
+export function calculateLifeExpectancy(ageObject, life) {
   let LifeExpectancy = [0, 0];
-  if (life -age > 0){
-    LifeExpectancy = [1, (life - age)];
-  } else if (life - age < 0) {
-    LifeExpectancy = [2, (age-life)];
-  } else if (age === life) {
+  if (life - ageObject.earthAge > 0){
+    LifeExpectancy = [1, (life - ageObject.earthAge)];
+  } else if (life - ageObject.earthAge < 0) {
+    LifeExpectancy = [2, (ageObject.earthAge - life)];
+  } else if (ageObject.earthAge === life) {
     LifeExpectancy = [3,0];
   }
   return LifeExpectancy;
