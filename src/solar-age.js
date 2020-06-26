@@ -44,11 +44,10 @@ export function calculateLifeExpectancy(age, life) {
     LifeExpectancy = (life - age);
   } else if (life - age < 0) {
     LifeExpectancy = `You've surpassed life expectancy on your planet by ${age-life} years !`;
+  } else if (age === life) {
+    LifeExpectancy = "You'll probably die this year!";
   }
-
   return LifeExpectancy;
 }
 
-  // else if (age === life) {
-  //   LifeExpectancy = "Youll probably die this year";
-  // }
+  
