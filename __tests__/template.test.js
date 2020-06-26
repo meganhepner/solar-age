@@ -10,7 +10,13 @@ describe('Age', () => {
 describe('checkInput', () => {
   test('should return false if user input is not a whole number', () => {
     const age = new Age(5.25, 0, 0, 0, 0);
+    const age1 = new Age(-25, 0, 0, 0, 0);
+    const age2 = new Age("megan", 0, 0, 0, 0);
+    const age3 = new Age(39, 0, 0, 0, 0);
     expect(checkInput(age)).toEqual(false);
+    expect(checkInput(age1)).toEqual(false);
+    expect(checkInput(age2)).toEqual(false);
+    expect(checkInput(age3)).toEqual(true);
   });
 });
 
@@ -42,10 +48,13 @@ describe('calculateJupiter', () => {
   });
 });
 
-describe('calculateLifeExpectancy', () => {
-  test('should calculate life expectancy in Earth years', () => {
-    const age = 39;
-    const life = 80;
-    expect(calculateLifeExpectancy(age, life)).toEqual(41);
-  });
-});
+// describe('calculateLifeExpectancy', () => {
+//   test('should calculate how long a user has to live on planet, or by how much they have surpassed life expenctancy, () => {
+//     const age = 39;
+//     const life = 80;
+//     const overAge = 87;
+//     expect(calculateLifeExpectancy(age, life)).toEqual(41);
+//     expect
+//   });
+// });
+
