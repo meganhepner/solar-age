@@ -53,9 +53,11 @@ describe('calculateLifeExpectancy', () => {
     const age = 39;
     const life = 80;
     const overAge = 87;
+    const equalAge = 80;
     // cost equalAge = 80;
     expect(calculateLifeExpectancy(age, life)).toEqual(41);
     expect(calculateLifeExpectancy(overAge,life)).toEqual(`You've surpassed life expectancy on your planet by 7 years !`);
+    expect(calculateLifeExpectancy(equalAge, life)).toEqual("You'll probably die this year!");
   });
 });
 
