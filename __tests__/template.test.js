@@ -1,9 +1,16 @@
-import { Age, calculateMercury, calculateVenus, calculateMars, calculateJupiter } from './../src/solar-age.js';
+import { Age, checkInput, calculateMercury, calculateVenus, calculateMars, calculateJupiter } from './../src/solar-age.js';
 
 describe('Age', () => {
   test('should create a new age object', () => {
     const age = new Age(39, 162, 62, 20, 3);
     expect(age).toMatchObject({earthAge: 39, mercuryAge: 162, venusAge: 62, marsAge: 20, jupiterAge: 3});
+  });
+});
+
+describe('checkInput', () => {
+  test('should return false if user input is not a whole number', () => {
+    const age = new Age("megan", 0, 0, 0, 0);
+    expect(checkInput(age)).toEqual(false);
   });
 });
 

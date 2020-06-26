@@ -19,7 +19,7 @@
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Program will accept user input Age** | 39  | 39 |
+| **Program will refuse input that is not a whole number** | 39  | 39 |
 | **Program will convert Earth Age to Mercury age** | 39 | 162 |
 | **Program will convert Earth Age to Venus age** | 39 | 62 |
 | **Program will convert Earth Age to Mars age** | 39 | 20 |
