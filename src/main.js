@@ -8,19 +8,20 @@ $(document).ready(function () {
   $("form#ageLifeExpectancy").submit(function(event) {
     event.preventDefault();
     let earthAge = $("input#age").val();
-    let earthLife = $("input#life").val();
-    let age = new Age(earthAge, mercuryAge, venusAge, marsAge, jupiterAge);
-    if checkInput(false) {
+    // let earthLife = $("input#life").val();
+    let age = new Age(earthAge, 0, 0, 0, 0);
+    if (checkInput === false) {
       $("div#ageAnswer").text("Please enter your age in whole numbers!");
     } else {
-      let outputMercury = calculateMercury();
-      let outputVenus = calculateVenus();
-      let outputMars = calculateMars();
-      let outputJupiter = calculateJupiter();
-      $("div#ageAnswer").append(`<li> On Mercury you would be ${outputMercury} </li>`);
-      $("div#ageAnswer").text(`<li> On Venus you would be ${outputVenus}</li>`);
-      $("div#ageAnswer").text(`<li>On Mars you would be ${outputMars}</li>`);
-      $("div#ageAnswer").text(`<li>On Jupiter you would be ${outputJupiter}</li>`);
+      calculateMercury(earthAge);
+      calculateVenus(earthAge);
+      calculateMars(earthAge);
+      calculateJupiter(earthAge);
     }
+      $("div#ageAnswer").append(`<li> On Earth you would be ${age.earthAge} </li>`);
+      $("div#ageAnswer").append(`<li> On Mercury you would be ${age.mercuryAge} </li>`);
+      $("div#ageAnswer").append(`<li> On Venus you would be ${age.venusAge} </li>`);
+      $("div#ageAnswer").append(`<li> On Mars you would be ${age.marsAge} </li>`);
+      $("div#ageAnswer").append(`<li> On Jupiter you would be ${age.jupiterAge} </li>`); 
   });
 });
