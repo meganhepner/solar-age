@@ -8,6 +8,6 @@ export class Age {
   }
 }
 
-function mercuryAge(ageObject) {
-  // this.mercuryAge = (this.earthAge * 4.17);
+function calculateMercury(ageObject) {
+  let mercuryAge = Math.round(earthAge * 4.17);
 }

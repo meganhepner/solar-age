@@ -7,9 +7,9 @@ describe('Age', () => {
   });
 });
 
-describe('mercuryAge', () => {
+describe('calculateMercury', () => {
   test('should display earth age in mercury age', () => {
     const earthAge = 39;
-    expect(mercuryAge).toEqual(162);
+    expect(calculateMercury(earthAge)).toEqual(162);
   });
 });
