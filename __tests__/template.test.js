@@ -48,13 +48,14 @@ describe('calculateJupiter', () => {
   });
 });
 
-// describe('calculateLifeExpectancy', () => {
-//   test('should calculate how long a user has to live on planet, or by how much they have surpassed life expenctancy, () => {
-//     const age = 39;
-//     const life = 80;
-//     const overAge = 87;
-//     expect(calculateLifeExpectancy(age, life)).toEqual(41);
-//     expect
-//   });
-// });
+describe('calculateLifeExpectancy', () => {
+  test('should calculate how long a user has to live on earth, or by how much they have surpassed life expenctancy', () => {
+    const age = 39;
+    const life = 80;
+    const overAge = 87;
+    // cost equalAge = 80;
+    expect(calculateLifeExpectancy(age, life)).toEqual(41);
+    expect(calculateLifeExpectancy(overAge,life)).toEqual(`You've surpassed life expectancy on your planet by 7 years !`);
+  });
+});
 
