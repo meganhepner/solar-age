@@ -1,4 +1,4 @@
-import { Age, calculateMercury } from './../src/solar-age.js';
+import { Age, calculateMercury, calculateVenus } from './../src/solar-age.js';
 
 describe('Age', () => {
   test('should create a new age object', () => {
@@ -11,5 +11,12 @@ describe('calculateMercury', () => {
   test('should display earth age in mercury age', () => {
     const age = new Age(39, 0, 0, 0, 0);
     expect(calculateMercury(age)).toEqual(162);
+  });
+});
+
+describe('calculateVenus', () => {
+  test('should display earth age in venus age', () => {
+    const age = new Age(39, 0, 0, 0, 0);
+    expect(calculateVenus(age)).toEqual(62);
   });
 });
