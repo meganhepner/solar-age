@@ -5,26 +5,26 @@ export class Age {
  }
 
  checkInput() {
-  // if (this.earthAge > 0 && Number.isInteger(this.earthAge)) {
-  //   return true;
-  // } else {
-  //   return false;
-  // }
+  if (this.earthAge > 0 && Number.isInteger(this.earthAge)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-// calculateMercury() {
-//   const mercuryAge = Math.floor(ageObject.earthAge * 4.17);
-//   this.mercuryAge;
-// }
+calculateMercury() {
+  // const mercuryAge = Math.floor(ageObject.earthAge * 4.17);
+  // this.mercuryAge;
+}
+
+}
+
+
 
 // calculateVenus() {
 //   const venusAge = Math.floor(ageObject.earthAge * 1.61);
 //   this.venusAge;
 // }
-
-}
-
-
 
 // export function calculateEarthAge(ageObject) {
 //   let earthAge = 0;

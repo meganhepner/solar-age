@@ -5,22 +5,30 @@ describe('Age', () => {
 
   beforeEach(function() {
     age = new Age(39);
+    age.checkInput();
+    age.calculateMercury();
   });
 
   test('should correctly create a new age object', () => {
     expect(age).toBeInstanceOf(Age);
-    });
+  });
 
   describe('checkInput', () => {
     test('should return false if user input is not a whole number', () => {
-      const age = new Age(5.25, 0, 0, 0, 0);
-      const age1 = new Age(-25, 0, 0, 0, 0);
-      const age2 = new Age("megan", 0, 0, 0, 0);
-      const age3 = new Age(39, 0, 0, 0, 0);
-      expect(checkInput(age)).toEqual(false);
-      expect(checkInput(age1)).toEqual(false);
-      expect(checkInput(age2)).toEqual(false);
-      expect(checkInput(age3)).toEqual(true);
+      const age1 = new Age(-25);
+      const age2 = new Age("megan");
+      const age3 = new Age(5.25);
+      expect(age.checkInput()).toEqual(true);
+      expect(age1.checkInput()).toEqual(false);
+      expect(age2.checkInput()).toEqual(false);
+      expect(age3.checkInput()).toEqual(false);
+    });
+  });
+
+  describe('calculateMercury', () => {
+    test('should display earth age in mercury age', () => {
+      const age = new Age(39, 0, 0, 0, 0);
+      expect(age.calculateMercury()).toEqual(162);
     });
   });
 });
@@ -42,12 +50,7 @@ describe('Age', () => {
 //   });
 // });
 
-// describe('calculateMercury', () => {
-//   test('should display earth age in mercury age', () => {
-//     const age = new Age(39, 0, 0, 0, 0);
-//     expect(calculateMercury(age)).toEqual(162);
-//   });
-// });
+
 
 // describe('calculateVenus', () => {
 //   test('should display earth age in venus age', () => {
