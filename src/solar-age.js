@@ -4,13 +4,13 @@ export class Age {
     this.earthAge = earthAge;
  }
 
-//  checkInput() {
-//   if (this.earthAge > 0 && Number.isInteger(this.earthAge)) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
+ checkInput() {
+  // if (this.earthAge > 0 && Number.isInteger(this.earthAge)) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+}
 
 // calculateMercury() {
 //   const mercuryAge = Math.floor(ageObject.earthAge * 4.17);

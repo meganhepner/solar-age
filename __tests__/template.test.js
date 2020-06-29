@@ -3,29 +3,29 @@ import { Age } from './../src/solar-age.js'
 describe('Age', () => {
   let age;
 
-beforeEach(function() {
-  age = new Age(39);
-});
-
-
-test('should correctly create a new age object', () => {
-  expect(age).toBeInstanceOf(Age);
+  beforeEach(function() {
+    age = new Age(39);
   });
 
+  test('should correctly create a new age object', () => {
+    expect(age).toBeInstanceOf(Age);
+    });
+
+  describe('checkInput', () => {
+    test('should return false if user input is not a whole number', () => {
+      const age = new Age(5.25, 0, 0, 0, 0);
+      const age1 = new Age(-25, 0, 0, 0, 0);
+      const age2 = new Age("megan", 0, 0, 0, 0);
+      const age3 = new Age(39, 0, 0, 0, 0);
+      expect(checkInput(age)).toEqual(false);
+      expect(checkInput(age1)).toEqual(false);
+      expect(checkInput(age2)).toEqual(false);
+      expect(checkInput(age3)).toEqual(true);
+    });
+  });
 });
 
-// describe('checkInput', () => {
-//   test('should return false if user input is not a whole number', () => {
-//     const age = new Age(5.25, 0, 0, 0, 0);
-//     const age1 = new Age(-25, 0, 0, 0, 0);
-//     const age2 = new Age("megan", 0, 0, 0, 0);
-//     const age3 = new Age(39, 0, 0, 0, 0);
-//     expect(checkInput(age)).toEqual(false);
-//     expect(checkInput(age1)).toEqual(false);
-//     expect(checkInput(age2)).toEqual(false);
-//     expect(checkInput(age3)).toEqual(true);
-//   });
-// });
+
 
 // describe('calculateEarthAge', () => {
 //   test('should accept input from ETs and calculate their age in Earth years', () => {
