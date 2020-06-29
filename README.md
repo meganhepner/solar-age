@@ -5,7 +5,7 @@
 #### By _**Megan Hepner**_
 
 ## Description
-  This webpage is an overview of the lessons covered in Week 5 of Epicodus class. It converts the age of a person in Earth to ages on different planets. It uses Webpack to lint, bundle, and process code. It performs tests on each spec using Jest. It explores new ES6 concepts. 
+  This webpage is an overview of the lessons covered in Week 5 of Epicodus class. It converts the age of a person on Earth to ages on different planets, and ages from people on different plants to Earth years. It uses Webpack to lint, bundle, and process code. It performs tests on each spec using Jest. It explores new ES6 concepts. 
 
 
 ## Setup/Installation Requirements
