@@ -51,49 +51,42 @@ describe('Age', () => {
     });
   });
 
-  describe('calculateLifeExpectancy', () => { 
+  describe('calculateEarthLifeExpectancy', () => { 
     test('should calculate how long a user has to live', () => {
       let life = 80;
-      age.calculateLifeExpectancy(life);
-      expect(age.LifeExpectancy).toEqual([1, 41]);
+      age.calculateEarthLifeExpectancy(life);
+      expect(age.LifeExpectancy).toEqual(41);
+      expect(age.MercuryExpectancy).toEqual(171);
+      expect(age.VenusExpectancy).toEqual(66);
+      expect(age.MarsExpectancy).toEqual(22);
+      expect(age.JupiterExpectancy).toEqual(3);
   });
 });
 
-describe('calculateLifeExpectancy', () => { 
+describe('calculateEarthLifeOverage', () => { 
   test('should calculate by how much a user has surpassed life expenctancy', () => {
     let life = 80;
     let age = new Age(87);
-    age.calculateLifeExpectancy(life);
-    expect(age.LifeExpectancy).toEqual([2, 7]);
+    age.calculateEarthLifeExpectancy(life);
+    expect(age.LifeOverage).toEqual(7);
+    expect(age.MercuryOverage).toEqual(29);
+    expect(age.VenusOverage).toEqual(11);
+    expect(age.MarsOverage).toEqual(4);
+    expect(age.JupiterOverage).toEqual(1);
   });
 });
 
-describe('calculateLifeExpectancy', () => { 
+describe('calculateEarthLifeExpectancy', () => { 
   test('should calculate if a user is at the exact year of their life expectancy', () => {
     let life = 80;
     let age = new Age(80);
-    age.calculateLifeExpectancy(life);
-    expect(age.LifeExpectancy).toEqual([3, 0]);
+    age.calculateEarthLifeExpectancy(life);
+    expect(age.LifeEven).toEqual(0);
   });
 });
+
 });
 
 
-      // expect(calculateLifeExpectancy(overAge,life)).toEqual([2, 7]);
-      // expect(calculateLifeExpectancy(equalAge, life)).toEqual([3, 0]);
 
-
-
-// describe('calculateLifeExpectancy', () => {
-//   test('should calculate how long a user has to live on earth, or by how much they have surpassed life expenctancy', () => {
-//     const age = new Age(39, 0, 0, 0, 0);
-//     const life = 80;
-//     const overAge = new Age(87, 0, 0, 0, 0);
-//     const equalAge = new Age(80, 0, 0, 0, 0);
-//     // cost equalAge = 80;
-//     expect(calculateLifeExpectancy(age, life)).toEqual([1, 41]);
-//     expect(calculateLifeExpectancy(overAge,life)).toEqual([2, 7]);
-//     expect(calculateLifeExpectancy(equalAge, life)).toEqual([3, 0]);
-//   });
-// });
 

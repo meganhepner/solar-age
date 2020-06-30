@@ -28,26 +28,33 @@ export class Age {
     this.jupiterAge = Math.floor(this.earthAge * .08);
   }
 
-  calculateLifeExpectancy(life) {
+  calculateEarthLifeExpectancy(life) {
     if (life - this.earthAge > 0) {
-      this.LifeExpectancy = [1, (life - this.earthAge)];
+      this.LifeExpectancy = (life - this.earthAge);
+      this.MercuryExpectancy = Math.round(this.LifeExpectancy * 4.17);
+      this.VenusExpectancy = Math.round(this.LifeExpectancy * 1.61);
+      this.MarsExpectancy = Math.round(this.LifeExpectancy * .53);
+      this.JupiterExpectancy = Math.round(this.LifeExpectancy *.08)
     } else if (life - this.earthAge < 0) {
-      this.LifeExpectancy = [2, Math.abs(life - this.earthAge)];
+      this.LifeOverage = Math.abs(life - this.earthAge);
+      this.MercuryOverage = Math.round(this.LifeOverage * 4.17);
+      this.VenusOverage = Math.round(this.LifeOverage * 1.61);
+      this.MarsOverage = Math.round(this.LifeOverage * .53);
+      this.JupiterOverage = Math.round(this.LifeOverage *.08)
+    } else if (life === this.earthAge) {
+      this.LifeEven = 0;
+    }
+  }
+
+  calculateMercuryLifeExpectancy(earthLifeExpectancy) {
+    if (this.LifeExpectancy) {
+      this.mercuryExpectancy = (this.LifeExpectancy * 4.17);
+    } else if (this.LifeOverage) {
+      this.mercuryOverage = [2, Math.abs(life - this.earthAge)];
     } else if (life === this.earthAge) {
       this.LifeExpectancy = [3, 0];
     }
   }
-}
-// // export function calculateLifeExpectancy(ageObject, life) { WORKING CODE !!!
-// //   let LifeExpectancy = [0, 0];
-// //   if (life - ageObject.earthAge > 0){
-// //     LifeExpectancy = [1, (life - ageObject.earthAge)];
-// //   } else if (life - ageObject.earthAge < 0) {
-// //     LifeExpectancy = [2, (ageObject.earthAge - life)];
-// //   } else if (ageObject.earthAge === life) {
-// //     LifeExpectancy = [3,0];
-// //   }
-// //   return LifeExpectancy;
-// // }
 
+}
   
