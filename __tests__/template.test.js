@@ -37,42 +37,26 @@ describe('Age', () => {
     });
   });
 
+  describe('calculateMars', () => {
+    test('should display earth age in mars age', () => {
+      age.calculateMars();
+      expect(age.marsAge).toEqual(20);
+    });
+  });
+
+  describe('calculateJupiter', () => {
+    test('should display earth age in jupiter age', () => {
+      age.calculateJupiter();
+      expect(age.jupiterAge).toEqual(3);
+    });
+  });
+
 });
 
 
 
-// describe('calculateEarthAge', () => {
-//   test('should accept input from ETs and calculate their age in Earth years', () => {
-//     const ageEarth= new Age(39, 0, 0, 0, 0);
-//     const ageMercury= new Age(0, 4.17, 0, 0, 0);
-//     const ageVenus= new Age(0, 0, 1.61, 0, 0);
-//     const ageMars= new Age(0, 0, 0, .53, 0);
-//     const ageJupiter= new Age(0, 0, 0, 0, .08);
-//     expect(calculateEarthAge(ageEarth)).toEqual(39);
-//     expect(calculateEarthAge(ageEarth)).toEqual(39);
-//     expect(calculateEarthAge(ageEarth)).toEqual(39);
-//     expect(calculateEarthAge(ageEarth)).toEqual(39);
-//     expect(calculateEarthAge(ageEarth)).toEqual(39);
-//   });
-// });
 
 
-
-
-
-// describe('calculateMars', () => {
-//   test('should display earth age in mars age', () => {
-//     const age = new Age(39, 0, 0, 0, 0);
-//     expect(calculateMars(age)).toEqual(20);
-//   });
-// });
-
-// describe('calculateJupiter', () => {
-//   test('should display earth age in jupiter age', () => {
-//     const age = new Age(39, 0, 0, 0, 0);
-//     expect(calculateJupiter(age)).toEqual(3);
-//   });
-// });
 
 // // describe('calculateLifeExpectancy', () => { WORKING CODE !!!
 // //   test('should calculate how long a user has to live on earth, or by how much they have surpassed life expenctancy', () => {

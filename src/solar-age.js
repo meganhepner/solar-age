@@ -18,7 +18,15 @@ calculateMercury() {
 }
 
 calculateVenus() {
+  this.venusAge = Math.floor(this.earthAge * 1.61);
+}
 
+calculateMars() {
+  this.marsAge = Math.floor(this.earthAge * .53);
+}
+
+calculateJupiter() {
+  this.jupiterAge = Math.floor(this.earthAge * .08);
 }
 
 }
@@ -28,39 +36,11 @@ calculateVenus() {
 
 
 
-// export function calculateEarthAge(ageObject) {
-//   let earthAge = 0;
-//   if (ageObject.earthAge !== 0){
-//     earthAge = ageObject.earthAge;
-//     return earthAge;
-//   } else if (ageObject.mercuryAge !==0){
-//     earthAge = (Math.round(ageObject.mercuryAge * .24));
-//     return earthAge;
-//   } else if (ageObject.venusAge !== 0){
-//     earthAge = (Math.round(ageObject.venusAge * .62));
-//     return earthAge;
-//   } else if (ageObject.marsAge !== 0){
-//     earthAge = (Math.round(ageObject.marsAge * 1.88));
-//     return earthAge;
-//   } else if (ageObject.jupiterAge !== 0){
-//     earthAge = (Math.round(ageObject.jupiterAge * 11.86));
-//     return earthAge;
-//   }
-// }
 
 
 
 
 
-// export function calculateMars(ageObject) {
-//   const marsAge = Math.floor(ageObject.earthAge * .53);
-//   return marsAge;
-// }
-
-// export function calculateJupiter(ageObject) {
-//   const jupiterAge = Math.floor(ageObject.earthAge * .08);
-//   return jupiterAge;
-// }
 
 // // export function calculateLifeExpectancy(ageObject, life) { WORKING CODE !!!
 // //   let LifeExpectancy = [0, 0];
