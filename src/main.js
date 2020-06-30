@@ -9,11 +9,11 @@ $(document).ready(function () {
     event.preventDefault();
     // let earthLife = $("input#life").val();
     let earthAge = $("input#age").val();
-    let age = new Age(earthAge, 0, 0, 0, 0);
+    let age = new Age(earthAge);
     if (checkInput(earthAge) === false) {
       $("div#ageAnswer").text("Please enter your age in whole numbers!");
     } else {
-      calculateMercury(earthAge);
+      age.calculateMercury();
       calculateVenus(earthAge);
       calculateMars(earthAge);
       calculateJupiter(earthAge);

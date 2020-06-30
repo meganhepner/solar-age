@@ -2,6 +2,7 @@ export class Age {
 
   constructor(earthAge) {
     this.earthAge = earthAge;
+    this.mercuryAge = 0;
  }
 
  checkInput() {
@@ -13,18 +14,19 @@ export class Age {
 }
 
 calculateMercury() {
-  // const mercuryAge = Math.floor(ageObject.earthAge * 4.17);
-  // this.mercuryAge;
+  this.mercuryAge = Math.floor(this.earthAge * 4.17);
+}
+
+calculateVenus() {
+
 }
 
 }
 
 
 
-// calculateVenus() {
-//   const venusAge = Math.floor(ageObject.earthAge * 1.61);
-//   this.venusAge;
-// }
+
+
 
 // export function calculateEarthAge(ageObject) {
 //   let earthAge = 0;

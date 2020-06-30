@@ -1,12 +1,10 @@
-import { Age } from './../src/solar-age.js'
+import { Age } from './../src/solar-age.js';
 
 describe('Age', () => {
   let age;
 
   beforeEach(function() {
     age = new Age(39);
-    age.checkInput();
-    age.calculateMercury();
   });
 
   test('should correctly create a new age object', () => {
@@ -27,10 +25,18 @@ describe('Age', () => {
 
   describe('calculateMercury', () => {
     test('should display earth age in mercury age', () => {
-      const age = new Age(39, 0, 0, 0, 0);
-      expect(age.calculateMercury()).toEqual(162);
+      age.calculateMercury();
+      expect(age.mercuryAge).toEqual(162);
     });
   });
+
+  describe('calculateVenus', () => {
+    test('should display earth age in venus age', () => {
+      age.calculateVenus();
+      expect(age.venusAge).toEqual(62);
+    });
+  });
+
 });
 
 
@@ -52,12 +58,7 @@ describe('Age', () => {
 
 
 
-// describe('calculateVenus', () => {
-//   test('should display earth age in venus age', () => {
-//     const age = new Age(39, 0, 0, 0, 0);
-//     expect(calculateVenus(age)).toEqual(62);
-//   });
-// });
+
 
 // describe('calculateMars', () => {
 //   test('should display earth age in mars age', () => {
