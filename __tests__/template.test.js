@@ -51,25 +51,38 @@ describe('Age', () => {
     });
   });
 
+  describe('calculateLifeExpectancy', () => { 
+    test('should calculate how long a user has to live', () => {
+      let life = 80;
+      age.calculateLifeExpectancy(life);
+      expect(age.LifeExpectancy).toEqual([1, 41]);
+  });
+});
+
+describe('calculateLifeExpectancy', () => { 
+  test('should calculate by how much a user has surpassed life expenctancy', () => {
+    let life = 80;
+    let age = new Age(87);
+    age.calculateLifeExpectancy(life);
+    expect(age.LifeExpectancy).toEqual([2, 7]);
+  });
+});
+
+describe('calculateLifeExpectancy', () => { 
+  test('should calculate if a user is at the exact year of their life expectancy', () => {
+    let life = 80;
+    let age = new Age(80);
+    age.calculateLifeExpectancy(life);
+    expect(age.LifeExpectancy).toEqual([3, 0]);
+  });
+});
 });
 
 
+      // expect(calculateLifeExpectancy(overAge,life)).toEqual([2, 7]);
+      // expect(calculateLifeExpectancy(equalAge, life)).toEqual([3, 0]);
 
 
-
-
-// // describe('calculateLifeExpectancy', () => { WORKING CODE !!!
-// //   test('should calculate how long a user has to live on earth, or by how much they have surpassed life expenctancy', () => {
-// //     const age = new Age(39, 0, 0, 0, 0);
-// //     const life = 80;
-// //     const overAge = new Age(87, 0, 0, 0, 0);
-// //     const equalAge = new Age(80, 0, 0, 0, 0);
-// //     // cost equalAge = 80;
-// //     expect(calculateLifeExpectancy(age, life)).toEqual([1, 41]);
-// //     expect(calculateLifeExpectancy(overAge,life)).toEqual([2, 7]);
-// //     expect(calculateLifeExpectancy(equalAge, life)).toEqual([3, 0]);
-// //   });
-// // });
 
 // describe('calculateLifeExpectancy', () => {
 //   test('should calculate how long a user has to live on earth, or by how much they have surpassed life expenctancy', () => {
