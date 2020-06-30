@@ -8,7 +8,7 @@ $(document).ready(function () {
   $("form#ageLifeExpectancy").submit(function(event) {
     event.preventDefault();
     let earthAge = $("input#age").val();
-    let earthLife = $("input#life").val();
+    // let earthLife = $("input#life").val();
     let age = new Age(earthAge);
     if (age.checkInput === false) {
       $("div#ageAnswer").text("Please enter your age in whole numbers!");
